@@ -1,0 +1,193 @@
+.projects-section {
+  position: relative;
+}
+
+.projects-header {
+  margin-bottom: 6rem;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.case-study {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.case-study.layout-reversed {
+  direction: rtl;
+}
+
+.case-study.layout-reversed > * {
+  direction: ltr;
+}
+
+.cs-visual {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4/3;
+  background: var(--bg-secondary);
+}
+
+.cs-image-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.cs-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.cs-visual:hover .cs-image {
+  transform: scale(1.05);
+}
+
+.cs-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.3) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.cs-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cs-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cs-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.cs-subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cs-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cs-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cs-hook {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.cs-context {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.cs-label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-blue);
+  font-weight: 700;
+}
+
+[data-theme='dark'] .cs-label {
+  color: var(--accent-purple);
+}
+
+.cs-insight-text {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text-primary);
+  border-left: 3px solid var(--accent-purple);
+  padding-left: 16px;
+  margin: 8px 0;
+}
+
+.cs-solution-text {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.cs-impact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.cs-impact-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-secondary);
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.impact-metric {
+  font-size: 1.2rem;
+}
+
+.impact-text {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.cs-reflection {
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.reflection-text {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+@media (max-width: 1024px) {
+  .case-study {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .case-study.layout-reversed {
+    direction: ltr;
+  }
+  
+  .projects-list {
+    gap: 6rem;
+  }
+}
